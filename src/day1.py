@@ -6,3 +6,8 @@ character_age = "22"
 print("My name is " + character_name )
 print("I am  " + character_age + " years old")
 # makes it easy to modify data types 
+# DATA TYPES 
+#strings 
+#numbers 
+#boolean
+

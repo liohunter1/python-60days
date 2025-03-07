@@ -16,6 +16,15 @@ phrase = "Cyber Security"
 print(phrase + " is my career")
 #String indexing 
 #it starts with 0
-print(phrase[0]
+print(phrase[0])
+
+#STRING SLICING -Technique used to extract specific portrions of a string
+      #SYNTAX
+      #string[start:stop:step]
+#1. Extracting Substrings
+phrase = "My passion "
+print(phrase[4:10])
+
       
+
       

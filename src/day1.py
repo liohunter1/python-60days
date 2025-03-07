@@ -24,6 +24,12 @@ print(phrase[0])
 #1. Extracting Substrings
 phrase = "My passion "
 print(phrase[4:10])
+#2. Accessing First or Last Characters
+#Common in parsing tasks or validating input.
+
+code = "AB12345"
+print(code[:2])   # Output: AB (first 2 characters)
+print(code[-2:])  # Output: 45 (last 2 characters)
 
       
 

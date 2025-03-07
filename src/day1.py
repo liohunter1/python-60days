@@ -11,3 +11,11 @@ print("I am  " + character_age + " years old")
 #numbers 
 #boolean
 
+#Concatenation - This is the appending of a string to another string
+phrase = "Cyber Security"
+print(phrase + " is my career")
+#String indexing 
+#it starts with 0
+print(phrase[0]
+      
+      

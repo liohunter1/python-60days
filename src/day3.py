@@ -52,5 +52,5 @@ if not (username != user or email != user_email) and blocked == False:
     print("Access denied")
 else:
     print("Access denied")
-    #Updated Code (Using not Operator)
+    
 

@@ -61,3 +61,62 @@ for sales, support in zip(sales_report, support_report):
          print(f"Support satisfaction score: {support_score}")
          print(f"Difference in scores: {score_difference}")
          print("_" * 40)
+
+         #While loops 
+           #While loop is used to execute a block of code repeatedly as long as the condition is true.
+           #Scenario:
+           #User Aunthenication system
+           #The user is prompted to enter their username and password.
+correct_username = "Emilio"
+correct_password = "Emilio123"
+username = input("Enter your username: ")
+password = input("Enter your password: ")
+#Check if the username(case-insensitive) and password are correct
+while username.lower() != correct_username.lower()  or password != correct_password:
+    
+    if username.lower() != correct_username.lower() and  password != correct_password:
+         print("Invalid username and password. Try again.")
+
+    elif username.lower()!= correct_username.lower():
+           print("Invalid username. Try again.")
+    elif password != correct_password:
+           print("Invalid password. Try again.")
+    #Prompt the user to enter their username and password
+    username = input("Enter your username: ")
+    password = input("Enter your password: ")
+print("Login successful")
+          #Task: Brute-Force Detection System
+          #Scenario:
+          #You are building a brute-force detection system that tracks the number of failed login attempts. The system will lock the user out after three failed attempts.
+import datetime
+import time
+username = "admin"
+password = "secure123"
+attempt = 0
+max_attempts = 3
+attempts_log = []
+print("WELCOME TO THE LOGIN SYSTEM")
+print("_" * 100)
+while attempt < max_attempts:
+    username_input = input("Enter username: ")
+    password_input = input("Enter password: ")
+    #capture current timestamp
+    timestamp = datetime.datetime.now()
+    #Log the access attempt
+    attempts_log.append(f"TIMESTAMP:{timestamp}, USERNAME:{username_input}, PASSWORD:{password_input}")
+    
+    #Print the log
+    print(attempts_log)
+    if username_input == username and password_input == password:
+        print("Access granted")
+        break
+    else:
+        attempt += 1
+        remaining_attempts = max_attempts - attempt
+        if remaining_attempts > 0:
+            print(f"Access denied. Remaining attempts are {remaining_attempts}. Try again ...")
+            print("_" * 60)
+        else:
+            print("Access denied. Maximum attempts reached")    
+            time.sleep(300)#lock the system for 5 minutes
+             

@@ -46,10 +46,10 @@ blocked = False
 #Prompt the user to enter their username or email
 username = str(input("Enter your username: "))
 email = str(input("Enter your email: "))
-if not (username != admin or email != Admin_email) and blocked == False:
+if  (username == admin or email == Admin_email) and not blocked:
     print("Access granted")
-if not (username != user or email != user_email) and blocked == False:
-    print("Access denied")
+elif(username == user or email == user_email) and not blocked:
+    print("Access denied.User acess only")
 else:
     print("Access denied")
     

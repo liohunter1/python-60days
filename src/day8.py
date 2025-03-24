@@ -89,3 +89,45 @@ user_info = {
     "acess_level": 5
 }
 print(user_info) 
+#1. List Comprehension Tasks
+ips = ["192.168.1.1", "10.0.0.2", "192.168.2.3", "172.16.5.4", "192.168.10.5"]
+suspicious_ips={ip for ip in ips if ip.startswith("192.168")}
+print(suspicious_ips)
+
+#Create a User Access Level Map
+users = ["Emilio", "Orina", "charlie"]
+access_levels = ["admin", "user", "guest"]
+user_access_map={user:access_levels [i] for i, user in enumerate(users) }
+print (user_access_map )
+
+#Generate a Sequence of Encrypted IDs
+import hashlib
+
+user_ids= input("Please input your user id:").split()
+hashed_ids = (hashlib.md5(uid.encode()).hexdigest() for uid in user_ids)
+
+for h in hashed_ids:
+    print(h)
+
+
+# Use raw string (r) prefix or double backslashes for Windows paths
+log_path = r"C:\Users\le\OneDrive\Desktop\Project\python-60days\src\logs.txt"
+
+try:
+    with open(log_path) as logs_file:
+        error_logs = (
+            line.strip() for line in logs_file 
+            if any(keyword in line.lower() 
+            for keyword in ["error", "warning", "critical issues"])
+        )
+        
+        print("\nFiltered Log Entries:")
+        print("-" * 30)
+        for log in error_logs:
+            print(log)
+except FileNotFoundError:
+    print(f"Error: Log file not found at {log_path}")
+    print("Please create the file with some sample log entries first.")
+except Exception as e:
+    print(f"An error occurred: {e}")
+

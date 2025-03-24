@@ -1,0 +1,7 @@
+[INFO] System started successfully
+[ERROR] Database connection failed
+[WARNING] High CPU usage detected
+[INFO] Backup completed
+[ERROR] Critical security breach detected
+[WARNING] Memory usage exceeds 80%
+[CRITICAL ISSUES] Server not responding
